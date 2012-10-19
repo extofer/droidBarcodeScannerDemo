@@ -1,6 +1,6 @@
 package com.demo.barcodescanner;
 
-import org.apache.cordova.DroidGap;
+import com.phonegap.*;
 import android.os.Bundle;
 
 public class BarcodeScannerActivity extends DroidGap {

@@ -4,6 +4,6 @@
 	<classpathentry kind="src" path="gen"/>
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
-	<classpathentry kind="lib" path="C:/Users/gvilla/Documents/Dev - App/droidBarcodeScannerDemo/BarcodeScanner/libs/cordova-1.6.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/gvilla/Documents/Dev - App/droidBarcodeScannerDemo/BarcodeScanner/libs/phonegap-1.4.1.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>
