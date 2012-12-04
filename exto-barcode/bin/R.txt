@@ -206,6 +206,5 @@ int string wifi_type_incorrect 0x7f080077
 int string wifi_type_label 0x7f08007a
 int string zxing_url 0x7f08007b
 int[] styleable ViewfinderView { }
-int xml cordova 0x7f040000
-int xml plugins 0x7f040001
-int xml preferences 0x7f040002
+int xml config 0x7f040000
+int xml preferences 0x7f040001

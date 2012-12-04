@@ -1,62 +1,41 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
 <html>
-  <head>
-    <meta name="viewport" content="width=320; user-scalable=no" />
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-    <title>PhoneGap</title>
-      <link rel="stylesheet" href="main.css" type="text/css" media="screen" title="no title" charset="utf-8">
-      <script type="text/javascript" charset="utf-8" src="cordova-1.5.0.js"></script>      
-      <script type="text/javascript" charset="utf-8" src="barcodescanner.js"></script>      
-      <script type="text/javascript" charset="utf-8">
-    
-    function init(){
-        console.log("GOT AN ONLOAD!!!")
-        document.addEventListener("touchmove", preventBehavior, false);
-        document.addEventListener("deviceready", deviceInfo, true);     
-    }
-    
-    var preventBehavior = function(e) { 
-      e.preventDefault(); 
-    };
-      
-    var deviceInfo = function(){      
-      console.log("In deviceInfo!");
-      document.getElementById("platform").innerHTML = device.platform;
-      document.getElementById("version").innerHTML = device.version;
-      document.getElementById("uuid").innerHTML = device.uuid;
-    }
-    
-    function scan() {
-        window.plugins.barcodeScanner.scan(function(result) {
-                alert("We got a barcode\n" +
-                      "Result: " + result.text + "\n" +
-                      "Format: " + result.format); 
-            }, function(error) {
-                alert("Scanning failed: " + error);
-            });
-    }
-    
-    function encode(type, data) {
-        window.plugins.barcodeScanner.encode(type, data, function(result) {
-                alert("encode success: " + result);
-            }, function(error) {
-                alert("encoding failed: " + error);
-            });
-    }
-    
-  </script>
-  </head>
-  <body onload="init();" id="stage" class="theme">
-    <h1>Welcome to PhoneGap!</h1>
-    <h2>this file is located at assets/index.html</h2>
-    <div id="info">
-      <h4>Platform: <span id="platform">&nbsp;</span></h4>
-      <h4>Version: <span id="version">&nbsp;</span></h4>
-      <h4>UUID:   <span id="uuid">&nbsp;</span></h4>
-    </div>
-    <a href="#" class="btn large" onclick="scan();">Scan</a>
-    <a href="#" class="btn large" onclick="encode(BarcodeScanner.Encode.TEXT_TYPE, 'http://www.phonegap.com');">Encode Text</a>
-    <a href="#" class="btn large" onclick="encode(BarcodeScanner.Encode.EMAIL_TYPE, 'someone@somewhere.com');">Encode Email</a>
-    <a href="#" class="btn large" onclick="encode(BarcodeScanner.Encode.PHONE_TYPE, '1800551212');">Encode Phone</a>
-  </body>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/master.css" />
+        <title>Hello World</title>
+    </head>
+    <body id="stage" class="theme">
+        <div class="app">
+            <h1>Barcode Scanner Example</h1>
+            <a ontouchend="app.scan()" class="btn large">Scan</a>
+            <a ontouchend="app.encode()" class="btn large">Encode</a>
+        </div>
+        <script type="text/javascript" src="cordova-2.1.0.js"></script>
+        <script type="text/javascript" src="barcodescanner.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
 </html>

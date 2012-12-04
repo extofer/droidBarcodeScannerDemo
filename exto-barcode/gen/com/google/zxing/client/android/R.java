@@ -228,6 +228,6 @@ public final class R {
 		public static final int share_via_barcode = 0x7f020002;
 	}
 	public static final class xml {
-		public static final int preferences = 0x7f040002;
+		public static final int preferences = 0x7f040001;
 	}
 }
