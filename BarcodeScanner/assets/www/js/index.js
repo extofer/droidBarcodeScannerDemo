@@ -35,8 +35,9 @@ var app = {
     },
     // Scan a barcode
     //
+    //window.plugins.barcodeScanner.scan
     scan: function() {
-        window.plugins.barcodeScanner.scan( function(result) {
+    	window.BarcodeScanner.prototype.scan( function(result) {
             alert("We got a barcode\n" +
                   "Result: " + result.text + "\n" +
                   "Format: " + result.format + "\n" +

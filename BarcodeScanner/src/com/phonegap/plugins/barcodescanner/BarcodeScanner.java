@@ -21,7 +21,8 @@ import org.apache.cordova.api.PluginResult;
  * This calls out to the ZXing barcode reader and returns the result.
  */
 @SuppressWarnings("deprecation")
-public class BarcodeScanner extends Plugin {
+public class BarcodeScanner extends Plugin { 
+	//
     private static final String SCAN = "scan";
     private static final String ENCODE = "encode";
     private static final String CANCELLED = "cancelled";
