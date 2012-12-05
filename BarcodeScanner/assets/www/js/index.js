@@ -42,7 +42,7 @@ var app = {
                   "Format: " + result.format + "\n" +
                   "Cancelled: " + result.cancelled);
         }, function(error) {
-            alert("Scanning failed: " + error);
+            alert("Scanning failedx: " + error);
         });
     },
     // Encode text into QR code
