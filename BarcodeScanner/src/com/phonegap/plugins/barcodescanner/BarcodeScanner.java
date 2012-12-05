@@ -14,14 +14,13 @@ import org.json.JSONObject;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.util.Log;
-
 import org.apache.cordova.api.Plugin;
 import org.apache.cordova.api.PluginResult;
 
 /**
  * This calls out to the ZXing barcode reader and returns the result.
  */
+@SuppressWarnings("deprecation")
 public class BarcodeScanner extends Plugin {
     private static final String SCAN = "scan";
     private static final String ENCODE = "encode";
