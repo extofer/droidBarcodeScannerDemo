@@ -34,10 +34,10 @@ var app = {
         console.log("We got to device ready");
     },
     // Scan a barcode
-    //
+    //window.BarcodeScanner.prototype.scan
     //window.plugins.barcodeScanner.scan
     scan: function() {
-    	window.BarcodeScanner.prototype.scan( function(result) {
+    	window.plugins.barcodeScanner.scan( function(result) {
             alert("We got a barcode\n" +
                   "Result: " + result.text + "\n" +
                   "Format: " + result.format + "\n" +
